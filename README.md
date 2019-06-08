@@ -1,4 +1,4 @@
-# PSM Travel Simulator
+# PSM Travel Simulator ✈
 
 Frontend reactivity POC written using ES6, React and Redux.
 
@@ -19,10 +19,10 @@ Application give us possibility to import cities and the black-list from CSV lis
 ## Screenshoots:
 
 **Start screen:**
-![Start screen](/src/data/1.png)
+![Start screen](/src/data/2.png)
 
 **Simulation in progress:**
-![Start screen](/src/data/2.png)
+![Start screen](/src/data/1.png)
 
 ## Misc: 
 
