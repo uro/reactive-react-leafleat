@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {visitCity, importCities} from '../actions'
+import {visitCity, importCities, blacklistCities} from '../actions'
 import Side from '../components/side/Side'
 
 const getCities = (cities) => {
@@ -14,6 +14,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   importCities: pathToCities => dispatch(importCities(pathToCities)),
+  blacklistCities: pathToCities => dispatch(blacklistCities(pathToCities)),
   visitCity: city => dispatch(visitCity(city)),
 });
 

@@ -2,10 +2,16 @@ import React from 'react';
 import CitiesList from "../citiesList/CitiesList";
 import FileButton from "../button/FileButton";
 
-const Side = ({cities, importCities, visitCity}) => {
+const Side = ({cities, importCities, blacklistCities, visitCity}) => {
   function importCity(event) {
     const reader = new FileReader();
     reader.onload = () => importCities(reader.result);
+    reader.readAsText(event.target.files[0]);
+  }
+
+  function blacklistCity(event) {
+    const reader = new FileReader();
+    reader.onload = () => blacklistCities(reader.result);
     reader.readAsText(event.target.files[0]);
   }
 
@@ -20,9 +26,7 @@ const Side = ({cities, importCities, visitCity}) => {
         {cities.length === 0 &&
         <FileButton name="Import Cities" action={event => importCity(event)}/>
         }
-        <FileButton name="Blacklist" action={() => {
-
-        }}/>
+        <FileButton name="Blacklist" action={(event) => blacklistCity(event)}/>
       </div>
     </div>
   );

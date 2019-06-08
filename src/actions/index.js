@@ -1,6 +1,7 @@
 export const ADD_CITY = 'ADD_CITY';
 export const VISIT_CITY = 'VISIT_CITY';
 export const IMPORT_CITIES = 'IMPORT_CITIES';
+export const BLACKLIST_CITIES = 'BLACKLIST_CITIES';
 
 export const CENTER_MAP = 'CENTER_MAP';
 export const TOGGLE_SIMULATION = 'TOGGLE_SIMULATION';
@@ -19,6 +20,11 @@ export const visitCity = city => ({
 
 export const importCities = csv => ({
   type: IMPORT_CITIES,
+  csv
+});
+
+export const blacklistCities = csv => ({
+  type: BLACKLIST_CITIES,
   csv
 });
 

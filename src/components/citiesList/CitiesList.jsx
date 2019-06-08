@@ -3,10 +3,15 @@ import React from 'react';
 import './citiesList.css';
 
 const CitiesList = ({cities, visitCity}) => {
-  function getStyles(visited) {
+  function getStyles(visited, blacklisted) {
     if (visited === true) {
       return "citiesListElement visited";
     }
+
+    if (blacklisted === true) {
+      return "citiesListElement blacklisted";
+    }
+
     return "citiesListElement";
   }
 
@@ -14,7 +19,7 @@ const CitiesList = ({cities, visitCity}) => {
     <div className="citiesList">
       {cities.map((city) =>
         <div
-          className={getStyles(city.visited)}
+          className={getStyles(city.visited, city.blacklisted)}
           key={city.cityDetails.name + city.cityDetails.country + city.cityDetails.lat}
           onClick={() => visitCity(city.cityDetails)}
         >

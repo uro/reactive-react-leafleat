@@ -20,6 +20,10 @@
     background: #188e0d;
 }
 
+.blacklisted {
+    background: red;
+}
+
 .citiesListElementCoordinates {
     font-weight: normal;
     font-size: 80%;
