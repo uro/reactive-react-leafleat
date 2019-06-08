@@ -12,7 +12,6 @@ const cities = (state = [], action) => {
         }
       ];
     case VISIT_CITY:
-      console.log(state);
       return state.map(city => city.cityDetails.name === action.city.name ? {...city, visited: !city.visited} : city
       );
     case IMPORT_CITIES:
@@ -29,6 +28,11 @@ const cities = (state = [], action) => {
         }
 
         const cityDetails = cities[cityIndex].split(',');
+
+        if (cityDetails.length < 4) {
+          continue;
+        }
+
         data.push({
           cityDetails: new City(cityDetails[0], cityDetails[5], parseFloat(cityDetails[2]), parseFloat(cityDetails[3])),
           visited: false
