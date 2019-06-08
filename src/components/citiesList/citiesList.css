@@ -1,0 +1,26 @@
+.citiesList {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.citiesListElement {
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    background: #4b474e;
+    margin-top: 0.3em;
+    margin-right: 1em;
+}
+
+.visited {
+    background: #188e0d;
+}
+
+.citiesListElementCoordinates {
+    font-weight: normal;
+    font-size: 80%;
+}
